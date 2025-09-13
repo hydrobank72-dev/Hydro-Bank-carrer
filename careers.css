@@ -1,0 +1,99 @@
+body {
+  font-family: "inter", sans-serif;
+  color: #e5e7eb;
+  background-color: #cecfd1;
+}
+
+/* color-blue-light :#1447e6
+color-blue-dark : #1c398e
+color-violet :oklch(29.1% 0.149 302.717)
+color-dark:#18181b */
+
+button {
+  color: #e5e7eb;
+}
+
+h1 {
+  color: #18181b;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.hero-logo {
+  font-family: "poppins", sans-serif;
+  letter-spacing: 0.1em;
+}
+.section {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  display: none;
+}
+.section.active {
+  opacity: 1;
+  display: block;
+}
+.job-card {
+  transition: all 0.3s ease;
+}
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px #00004e;
+}
+.gradient-btn {
+  background: linear-gradient(90deg, #1447e6, #1c398e);
+  transition: box-shadow 0.3s ease;
+}
+.gradient-btn:hover {
+  box-shadow: 0 0 10px #00004e;
+}
+.faq-question {
+  transition: color 0.3s ease;
+}
+.faq-question:hover {
+  color: #555;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/* Drag and Drop Styles */
+.drag-drop {
+  transition: all 0.3s ease;
+}
+
+.drag-drop.drag-over {
+  border-color: #00004e;
+  background-color: #1c398e;
+}
