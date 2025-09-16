@@ -74,6 +74,10 @@ document.getElementById("applicationForm").addEventListener("submit", (e) => {
     // Show success message
     const successMsg = document.getElementById("successMessage");
     successMsg.classList.remove("hidden");
+
+    setTimeout(() => {
+      successMsg.classList.add("hidden");
+    }, 3333);
     // Optional: Send to backend (simulate)
     console.log("Form submitted:", Object.fromEntries(formData));
     // Reset form
