@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hydro Bank Careers</title>
+    <title>HydroBank Careers</title>
     <!-- Import Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Import FontAwesome for Icons -->
@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/careers.css">
+    <link rel="stylesheet" href="/style.css">
     
     <!-- Custom Tailwind Config for Fonts and Colors -->
     <script>
@@ -267,6 +267,11 @@
                 <label class="block font-semibold mb-2">Full Name</label>
                 <input type="text" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:border-hydro-blue" required>
             </div>
+              <div id="successMessage" class="hidden w-full mt-8 p-4 bg-green-100 text-green-800 rounded-lg text-center">
+                <span class="successMessageText">
+                    Thank you for applying🙌 — we’ll get back to you in 14 days!
+                </span>
+        </div>
             <div>
                 <label class="block font-semibold mb-2">Email</label>
                 <input type="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:border-hydro-blue" required>
@@ -318,9 +323,7 @@
                 <button type="submit" class="gradient-btn py-3 px-8 rounded-full font-bold">Submit Application</button>
             </div>
         </form>
-        <div id="successMessage" class="hidden mt-8 p-4 bg-green-100 text-green-800 rounded-lg text-center">
-            Application submitted successfully! We'll get back to you soon.
-        </div>
+      
     </section>
 
     <!-- Footer -->
@@ -335,7 +338,7 @@
         </div>
     </footer>  
 </body>
-<script src="/careers.js"></script>
+<script src="/script.js"></script>
 </html>
 </content>
 </create_file>
