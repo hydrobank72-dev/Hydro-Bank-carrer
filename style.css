@@ -2,6 +2,8 @@ body {
   font-family: "inter", sans-serif;
   color: #e5e7eb;
   background-color: #cecfd1;
+  position: relative;
+  z-index: 1;
 }
 
 /* color-blue-light :#1447e6
@@ -11,6 +13,26 @@ color-dark:#18181b */
 
 button {
   color: #e5e7eb;
+}
+
+#successMessage {
+  width: 800px;
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #cecfd1;
+  z-index: 2;
+  position: fixed;
+  right: 0;
+  top: 111px;
+  margin: auto;
+}
+
+.successMessageText {
+  text-align: center;
+  margin: auto;
+  font-size: 22px;
+  color: #1447e6;
+  font-weight: bold;
 }
 
 h1 {
