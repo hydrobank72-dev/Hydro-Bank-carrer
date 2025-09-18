@@ -1,102 +1,93 @@
+// Utility
+const $ = (sel) => document.querySelector(sel);
+const $$ = (sel) => document.querySelectorAll(sel);
+
+// SECTION SWITCHER
 function showSection(sectionId) {
-  document.querySelectorAll(".section").forEach((sec) => {
-    sec.classList.remove("active");
-  });
-  document.getElementById(sectionId).classList.add("active");
-  // Update active nav link
-  document.querySelectorAll(".nav-link").forEach((link) => {
-    link.classList.remove("text-hydro-blue", "border-b-2", "border-hydro-blue");
-  });
-  const activeLink = document.querySelector(`[data-section="${sectionId}"]`);
-  if (activeLink) {
-    activeLink.classList.add("text-hydro-blue", "border-b-2");
-  }
+  $$(".section").forEach((sec) => sec.classList.remove("active"));
+  $(`#${sectionId}`).classList.add("active");
+
+  // Update nav active state
+  $$(".nav-link").forEach((link) =>
+    link.classList.remove("text-hydro-blue", "border-b-2", "border-hydro-blue")
+  );
+  const activeLink = $(`.nav-link[data-section="${sectionId}"]`);
+  activeLink?.classList.add(
+    "text-hydro-blue",
+    "border-b-2",
+    "border-hydro-blue"
+  );
 }
 
-// Nav Click Events
-document.querySelectorAll(".nav-link").forEach((link) => {
+// Nav links (delegated)
+$$(".nav-link").forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
-    const section = e.target.getAttribute("data-section");
-    showSection(section);
+    showSection(link.dataset.section);
   });
 });
 
-// FAQ Accordion
-function toggleFAQ(button) {
-  const answer = button.nextElementSibling;
-  answer.classList.toggle("hidden");
-  const icon = button.querySelector("i");
-  icon.classList.toggle("fa-chevron-down");
-  icon.classList.toggle("fa-chevron-up");
-}
+// HERO LOGO → Home
+$(".hero-logo").addEventListener("click", () => showSection("home"));
 
-// Drag and Drop
-const dropArea = document.getElementById("dragDropArea");
-const fileInput = document.getElementById("resume");
-const fileNameDiv = document.getElementById("fileName");
+// FAQ ACCORDION
+$$(".faq-question").forEach((btn) =>
+  btn.addEventListener("click", () => {
+    const answer = btn.nextElementSibling;
+    answer.classList.toggle("hidden");
+    btn.querySelector("i")?.classList.toggle("fa-chevron-up");
+    btn.querySelector("i")?.classList.toggle("fa-chevron-down");
+  })
+);
 
-dropArea.addEventListener("click", () => fileInput.click());
+// DRAG & DROP FILE UPLOAD
+const dropArea = $("#dragDropArea");
+const fileInput = $("#resume");
+const fileNameDiv = $("#fileName");
 
-dropArea.addEventListener("dragover", (e) => {
-  e.preventDefault();
-  dropArea.classList.add("drag-over");
-});
-
-dropArea.addEventListener("dragleave", () => {
-  dropArea.classList.remove("drag-over");
-});
-
-dropArea.addEventListener("drop", (e) => {
-  e.preventDefault();
-  dropArea.classList.remove("drag-over");
-  const files = e.dataTransfer.files;
-  if (files.length > 0) {
-    fileInput.files = files;
-    fileNameDiv.textContent = files[0].name;
-    fileNameDiv.classList.remove("hidden");
-  }
+["click", "dragover", "dragleave", "drop"].forEach((event) => {
+  dropArea.addEventListener(event, (e) => {
+    e.preventDefault();
+    if (event === "click") fileInput.click();
+    if (event === "dragover") dropArea.classList.add("drag-over");
+    if (event === "dragleave") dropArea.classList.remove("drag-over");
+    if (event === "drop") {
+      dropArea.classList.remove("drag-over");
+      handleFile(e.dataTransfer.files[0]);
+    }
+  });
 });
 
 fileInput.addEventListener("change", () => {
-  if (fileInput.files.length > 0) {
-    fileNameDiv.textContent = fileInput.files[0].name;
-    fileNameDiv.classList.remove("hidden");
-  }
+  if (fileInput.files.length > 0) handleFile(fileInput.files[0]);
 });
 
-// Form Submission
-document.getElementById("applicationForm").addEventListener("submit", (e) => {
+function handleFile(file) {
+  fileInput.files = new DataTransfer().items.add(file).files;
+  fileNameDiv.textContent = file.name;
+  fileNameDiv.classList.remove("hidden");
+}
+
+// FORM SUBMISSION
+$("#applicationForm").addEventListener("submit", (e) => {
   e.preventDefault();
-  // Simple validation
   const formData = new FormData(e.target);
-  if (validateForm(formData)) {
-    // Show success message
-    const successMsg = document.getElementById("successMessage");
-    successMsg.classList.remove("hidden");
 
-    setTimeout(() => {
-      successMsg.classList.add("hidden");
-    }, 3333);
-    // Optional: Send to backend (simulate)
-    console.log("Form submitted:", Object.fromEntries(formData));
-    // Reset form
-    e.target.reset();
-    fileNameDiv.classList.add("hidden");
-  }
+  if (!validateForm(formData)) return;
+
+  $("#successMessage").classList.remove("hidden");
+  console.log("Form submitted:", Object.fromEntries(formData));
+
+  e.target.reset();
+  fileNameDiv.classList.add("hidden");
 });
 
-function validateForm(formData) {
-  // Basic validation
-  if (
-    !formData.get("name") ||
-    !formData.get("email") ||
-    !formData.get("whatsapp")
-  ) {
+function validateForm(fd) {
+  if (!fd.get("name") || !fd.get("email") || !fd.get("whatsapp")) {
     alert("Please fill in all required fields.");
     return false;
   }
-  if (!formData.get("nda")) {
+  if (!fd.get("nda")) {
     alert("You must agree to the NDA.");
     return false;
   }

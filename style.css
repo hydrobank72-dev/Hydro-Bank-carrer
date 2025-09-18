@@ -1,121 +1,93 @@
 body {
-  font-family: "inter", sans-serif;
-  color: #e5e7eb;
-  background-color: #cecfd1;
-  position: relative;
-  z-index: 1;
+  font-family: "Inter", sans-serif;
+  color: #374151; /* softer gray */
+  background: #f9fafb;
+  line-height: 1.6;
 }
 
-/* color-blue-light :#1447e6
-color-blue-dark : #1c398e
-color-violet :oklch(29.1% 0.149 302.717)
-color-dark:#18181b */
-
-button {
-  color: #e5e7eb;
-}
-
-#successMessage {
-  width: 800px;
-  text-align: center;
-  padding: 30px 20px;
-  background-color: #cecfd1;
-  z-index: 2;
-  position: fixed;
-  right: 0;
-  top: 111px;
-  margin: auto;
-}
-
-.successMessageText {
-  text-align: center;
-  margin: auto;
-  font-size: 22px;
-  color: #1447e6;
-  font-weight: bold;
-}
-
-h1 {
-  color: #18181b;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
+/* HERO LOGO */
 .hero-logo {
-  font-family: "poppins", sans-serif;
-  letter-spacing: 0.1em;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.05em;
+  transition: transform 0.2s ease;
 }
+.hero-logo:hover {
+  transform: scale(1.05);
+}
+
+/* SECTIONS */
 .section {
-  transition: opacity 0.5s ease-in-out;
   opacity: 0;
   display: none;
+  transition: opacity 0.4s ease-in-out;
 }
 .section.active {
   opacity: 1;
   display: block;
 }
+
+/* JOB CARDS */
 .job-card {
   transition: all 0.3s ease;
+  border-radius: 12px;
 }
 .job-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px #00004e;
-}
-.gradient-btn {
-  background: linear-gradient(90deg, #1447e6, #1c398e);
-  transition: box-shadow 0.3s ease;
-}
-.gradient-btn:hover {
-  box-shadow: 0 0 10px #00004e;
-}
-.faq-question {
-  transition: color 0.3s ease;
-}
-.faq-question:hover {
-  color: #555;
-}
-.tooltip {
-  position: relative;
-  display: inline-block;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* BUTTONS */
+.gradient-btn {
+  background: linear-gradient(90deg, #1447e6, #1c398e);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.gradient-btn:hover {
+  box-shadow: 0 0 15px rgba(20, 71, 230, 0.6);
+  transform: translateY(-2px);
+}
+
+/* FAQ */
+.faq-question {
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.faq-question:hover {
+  background: #f3f4f6;
+  color: #1447e6;
+  border-radius: 8px;
+}
+
+/* TOOLTIP */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 200px;
-  background-color: #555;
+  width: 220px;
+  background: #111827;
   color: #fff;
   text-align: center;
-  border-radius: 6px;
-  padding: 5px;
+  border-radius: 8px;
+  padding: 8px;
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   bottom: 125%;
   left: 50%;
-  margin-left: -100px;
+  margin-left: -110px;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease;
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-/* Drag and Drop Styles */
+
+/* DRAG & DROP */
 .drag-drop {
+  border: 2px dashed #9ca3af;
+  border-radius: 12px;
+  padding: 20px;
   transition: all 0.3s ease;
 }
-
 .drag-drop.drag-over {
-  border-color: #00004e;
-  background-color: #1c398e;
+  border-color: #1447e6;
+  background: #eef2ff;
+  color: #1c398e;
 }
