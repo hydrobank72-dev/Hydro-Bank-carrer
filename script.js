@@ -69,17 +69,52 @@ function handleFile(file) {
 }
 
 // FORM SUBMISSION
+// $("#applicationForm").addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const formData = new FormData(e.target);
+
+//   if (!validateForm(formData)) return;
+
+//   $("#successMessage").classList.remove("hidden");
+//   console.log("Form submitted:", Object.fromEntries(formData));
+
+//   e.target.reset();
+//   fileNameDiv.classList.add("hidden");
+// });
+
 $("#applicationForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
 
   if (!validateForm(formData)) return;
 
+  const applicant = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    whatsapp: formData.get("whatsapp"),
+    role: formData.get("role"),
+    skills: formData.get("skills"),
+    portfolio: formData.get("portfolio"),
+    message: formData.get("message"),
+    nda: formData.get("nda") ? "Agreed" : "Not agreed",
+    submittedAt: new Date().toLocaleString(),
+  };
+
+  console.log(applicant);
+
+  let applications = JSON.parse(localStorage.getItem("applications")) || [];
+
+  applications.push(applicant);
+
+  localStorage.setItem("applications", JSON.stringify(applications));
+
   $("#successMessage").classList.remove("hidden");
-  console.log("Form submitted:", Object.fromEntries(formData));
 
   e.target.reset();
+
   fileNameDiv.classList.add("hidden");
+
+  console.log("Application stored:", applicant);
 });
 
 function validateForm(fd) {
