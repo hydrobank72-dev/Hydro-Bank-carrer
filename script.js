@@ -93,3 +93,38 @@ function validateForm(fd) {
   }
   return true;
 }
+
+// FORM SUBMISSION
+$("#applicationForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+
+  if (!validateForm(formData)) return;
+
+  const applicant = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    whatsapp: formData.get("whatsapp"),
+    role: formData.get("role"),
+    skills: formData.get("skills"),
+    portfolio: formData.get("portfolio"),
+    message: formData.get("message"),
+    nda: formData.get("nda") ? "Agreed" : "Not agreed",
+    submittedAt: new Date().toLocaleString(),
+  };
+
+  // Get existing applications from localStorage
+  let applications = JSON.parse(localStorage.getItem("applications")) || [];
+
+  // Add new one
+  applications.push(applicant);
+
+  // Save back
+  localStorage.setItem("applications", JSON.stringify(applications));
+
+  $("#successMessage").classList.remove("hidden");
+  e.target.reset();
+  fileNameDiv.classList.add("hidden");
+
+  console.log("Application stored:", applicant);
+});
