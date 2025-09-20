@@ -69,32 +69,19 @@ function handleFile(file) {
 }
 
 // FORM SUBMISSION
-$("#applicationForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const formData = new FormData(e.target);
+// $("#applicationForm").addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const formData = new FormData(e.target);
 
-  if (!validateForm(formData)) return;
+//   if (!validateForm(formData)) return;
 
-  $("#successMessage").classList.remove("hidden");
-  console.log("Form submitted:", Object.fromEntries(formData));
+//   $("#successMessage").classList.remove("hidden");
+//   console.log("Form submitted:", Object.fromEntries(formData));
 
-  e.target.reset();
-  fileNameDiv.classList.add("hidden");
-});
+//   e.target.reset();
+//   fileNameDiv.classList.add("hidden");
+// });
 
-function validateForm(fd) {
-  if (!fd.get("name") || !fd.get("email") || !fd.get("whatsapp")) {
-    alert("Please fill in all required fields.");
-    return false;
-  }
-  if (!fd.get("nda")) {
-    alert("You must agree to the NDA.");
-    return false;
-  }
-  return true;
-}
-
-// FORM SUBMISSION
 $("#applicationForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
@@ -113,18 +100,31 @@ $("#applicationForm").addEventListener("submit", (e) => {
     submittedAt: new Date().toLocaleString(),
   };
 
-  // Get existing applications from localStorage
+  console.log(applicant);
+
   let applications = JSON.parse(localStorage.getItem("applications")) || [];
 
-  // Add new one
   applications.push(applicant);
 
-  // Save back
   localStorage.setItem("applications", JSON.stringify(applications));
 
   $("#successMessage").classList.remove("hidden");
+
   e.target.reset();
+
   fileNameDiv.classList.add("hidden");
 
   console.log("Application stored:", applicant);
 });
+
+function validateForm(fd) {
+  if (!fd.get("name") || !fd.get("email") || !fd.get("whatsapp")) {
+    alert("Please fill in all required fields.");
+    return false;
+  }
+  if (!fd.get("nda")) {
+    alert("You must agree to the NDA.");
+    return false;
+  }
+  return true;
+}
