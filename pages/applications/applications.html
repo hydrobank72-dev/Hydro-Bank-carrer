@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Applications</title>
+    <script defer src="./applications.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2rem;
+      }
+      .hidden {
+        display: none;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+      }
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Team Access — Applications</h2>
+
+    <div id="login">
+      <p>Enter Access Key:</p>
+      <input type="password" id="accessKey" placeholder="Enter key" />
+      <button onclick="checkAccess()">Login</button>
+    </div>
+
+    <div id="appData" class="hidden">
+      <h3>Stored Applications</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>WhatsApp</th>
+            <th>Role</th>
+            <th>Skills</th>
+            <th>Portfolio</th>
+            <th>Message</th>
+            <th>NDA</th>
+            <th>Submitted</th>
+          </tr>
+        </thead>
+        <tbody id="applicationsTable"></tbody>
+      </table>
+    </div>
+  </body>
+</html>
