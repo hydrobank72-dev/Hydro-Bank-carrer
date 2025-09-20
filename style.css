@@ -1,18 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "SUSE Mono", sans-serif;
+  /* font-family: "Inter", sans-serif; */
   color: #374151; /* softer gray */
-  background: #f9fafb;
+  background-image: linear-gradient(to bottom right, #f9fafb, #dae6ed, #e0e7ff);
   line-height: 1.6;
+  font-weight: 700;
 }
 
 /* HERO LOGO */
 .hero-logo {
-  font-family: "Poppins", sans-serif;
+  font-family: "SUSE Mono", sans-serif;
+  font-weight: 700;
   letter-spacing: 0.05em;
   transition: transform 0.2s ease;
 }
 .hero-logo:hover {
   transform: scale(1.05);
+}
+
+nav {
+  font-family: "SUSE Mono", sans-serif;
 }
 
 /* SECTIONS */
@@ -30,6 +41,7 @@ body {
 .job-card {
   transition: all 0.3s ease;
   border-radius: 12px;
+  font-family: "Montserrat", sans-serif;
 }
 .job-card:hover {
   transform: translateY(-6px);
