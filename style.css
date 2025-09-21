@@ -31,6 +31,7 @@ nav {
   opacity: 0;
   display: none;
   transition: opacity 0.4s ease-in-out;
+  min-height: 100vh;
 }
 .section.active {
   opacity: 1;
@@ -72,15 +73,15 @@ nav {
 /* TOOLTIP */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 220px;
-  background: #111827;
-  color: #fff;
+  width: 333px;
+  background: #1c398e;
+  color: #f9fafb;
   text-align: center;
   border-radius: 8px;
   padding: 8px;
   position: absolute;
   z-index: 10;
-  bottom: 125%;
+  bottom: 100%;
   left: 50%;
   margin-left: -110px;
   opacity: 0;
