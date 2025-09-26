@@ -5,26 +5,48 @@
     <title>HydroBank Internship</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="intern.css" />
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Hero -->
     <header>
       <h1>HydroBank Internship Program</h1>
-      <p>
+    </header>
+    <div class="w-full flex items-center flex-col text-center my-8 px-4">
+      <p class="w-2/4 text-blue-500 text-3xl font-semibold mb-4">
         Join HydroBank’s internship program and work on cutting-edge financial
         technologies. Gain real-world experience, mentorship, and an opportunity
         to shape the future of banking.
       </p>
-    </header>
-    <section class="certificate">
-      <h2>Certificate of Completion 🏆</h2>
+    </div>
+    <section
+      class="certificate flex flex-col items-center my-8 gap-4 justify-center"
+    >
+      <h2 class="text-2xl font-semibold">Certificate of Completion 🏆</h2>
       <img src="/assets/certificate.jpg" alt="Internship Certificate Example" />
     </section>
 
     <!-- Internship Form -->
-    <section>
-      <h2>Apply Now 🚀</h2>
-      <form id="applicationForm">
+    <section class="flex flex-col items-center my-8 justify-center">
+      <h2 class="text-2xl my-8 font-semibold">Apply Now 🚀</h2>
+      <i
+        class="fa-solid fa-down-long animate-bounce text-3xl text-blue-800"
+      ></i>
+
+      <a
+        href="/index.html"
+        target="_blank"
+        type="submit"
+        class="gradient-btn w-full text-center"
+        >Application Form
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+      <!-- <form id="applicationForm">
         <div>
           <label>Full Name</label>
           <input type="text" name="name" required />
@@ -99,10 +121,10 @@
         <div style="text-align: center; margin-top: 1rem">
           <button type="submit" class="gradient-btn">Submit Application</button>
         </div>
-      </form>
-      <div id="successMessage">
+      </form> -->
+      <!-- <div id="successMessage">
         ✅ Thank you for applying — we’ll get back to you in 14 days!
-      </div>
+      </div> -->
     </section>
 
     <!-- Certificate Placeholder -->

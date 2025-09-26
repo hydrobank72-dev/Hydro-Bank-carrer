@@ -100,8 +100,6 @@ $("#applicationForm").addEventListener("submit", (e) => {
     submittedAt: new Date().toLocaleString(),
   };
 
-  console.log(applicant);
-
   let applications = JSON.parse(localStorage.getItem("applications")) || [];
 
   applications.push(applicant);
