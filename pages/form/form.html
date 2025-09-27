@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HydroBank | Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section
+      class="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-white to-blue-50 px-4 my-8"
+    >
+      <!-- Hero -->
+      <header>
+        <h1>Apply for the Future of Crypto Banking!</h1>
+      </header>
+      <div class="w-full flex items-center flex-col text-center my-8 px-4">
+        <p class="w-2/4 text-blue-500 text-3xl font-semibold mb-4">
+          Join HydroBank, a next-generation decentralized banking platform built
+          on Web3.
+        </p>
+      </div>
+
+      <!-- Form -->
+
+      <form
+        id="applicationForm"
+        class="bg-white rounded-lg shadow-xl p-8 space-y-6 fade-in"
+      >
+        <div>
+          <label class="block font-semibold mb-2">Full Name</label>
+          <input
+            type="text"
+            name="name"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:border-hydro-blue"
+            required
+          />
+        </div>
+        <div
+          id="successMessage"
+          class="hidden w-full mt-8 p-4 bg-green-100 text-green-800 rounded-lg text-center"
+        >
+          <span class="successMessageText">
+            Thank you for applying🙌 — we’ll get back to you in 14 days!
+          </span>
+        </div>
+        <div>
+          <label class="block font-semibold mb-2">Email</label>
+          <input
+            type="email"
+            name="email"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:border-hydro-blue"
+            required
+          />
+        </div>
+        <div>
+          <label class="block font-semibold mb-2">WhatsApp</label>
+          <input
+            type="tel"
+            name="whatsapp"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:border-hydro-blue"
+            required
+          />
+        </div>
+        <div>
+          <label class="block font-semibold mb-2">Role</label>
+          <select
+            name="role"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:border-hydro-blue"
+            required
+          >
+            <option>Select Role</option>
+            <option>Frontend Developer</option>
+            <option>Backend Developer</option>
+            <option>Blockchain Engineer</option>
+            <option>Solidity Developer</option>
+            <option>AI/ML Engineer</option>
+            <option>Data Scientist</option>
+            <option>Data Analyst</option>
+            <option>HR Manager</option>
+            <option>Marketing Specialist</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-semibold mb-2">Skills</label>
+          <textarea
+            name="skills"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:border-hydro-blue"
+            rows="2"
+            placeholder="e.g., React, Python, Solidity"
+          ></textarea>
+        </div>
+        <div>
+          <label class="block font-semibold mb-2">Portfolio/GitHub</label>
+          <input
+            type="url"
+            name="portfolio"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:border-hydro-blue"
+          />
+        </div>
+        <div>
+          <label class="block font-semibold mb-2">Resume Upload</label>
+          <div
+            id="dragDropArea"
+            class="drag-drop border-2 border-dashed border-gray-400 rounded-lg p-6 text-center cursor-pointer"
+          >
+            <p class="text-gray-500">
+              Drag and drop your resume here or click to select
+            </p>
+            <input
+              type="file"
+              id="resume"
+              name="resume"
+              accept=".pdf,.doc,.docx"
+              class="hidden"
+            />
+          </div>
+          <div
+            id="fileName"
+            class="mt-2 text-hydro-blue font-semibold hidden"
+          ></div>
+        </div>
+        <div>
+          <label class="block font-semibold mb-2">Short Message</label>
+          <textarea
+            name="message"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:border-hydro-blue"
+            rows="3"
+            placeholder="Tell us why you're interested..."
+          ></textarea>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" name="nda" id="nda" class="mr-2" required />
+          <label for="nda" class="font-semibold">I agree to the NDA</label>
+        </div>
+        <span class="text-gray-500"
+          >Note: Your data will be used only for recruitment.</span
+        >
+        <div class="text-center">
+          <button
+            type="submit"
+            class="gradient-btn py-3 px-8 rounded-full font-bold"
+          >
+            Submit Application
+          </button>
+        </div>
+      </form>
+    </section>
+  </body>
+  <script src="/script.js"></script>
+</html>
