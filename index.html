@@ -56,7 +56,7 @@
 
     <!-- Sections -->
     <!-- Home Section -->
-    <section id="home" class="section active p-8 max-w-7xl mx-auto">
+    <section id="home" class="section active p-8 max-w-[100rem] mx-auto">
         <div class="text-center mb-12 fade-in">
           
             <h1 class="text-hydro-blue text-6xl hero-logo mb-4">
@@ -66,84 +66,84 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
             <!-- Job Cards -->
-            <div class="job-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+            <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip" >
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">Frontend Developer</h3>
                 <p class="text-gray-600 mb-4">Build sleek, responsive user interfaces with React and modern JavaScript.</p>
-                <button class="gradient-btn text-sm py-2 px-4 rounded-full" onclick="showSection('careers')">Apply Now</button>
-                <div class="tooltip mt-2">
-                    <span class="text-hydro-blue cursor-pointer">Learn More</span>
+                <div class="w-full mt-2">
+                    <button class="gradient-btn text-sm py-2 px-4 rounded-full w-full" onclick="showSection('careers')">Apply Now</button>
+                    <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Focus on UI/UX, mobile-first design, and integration with backend APIs. Ideal for creative minds.</span>
                 </div>
             </div>
-            <div class="job-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+            <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">Backend Developer</h3>
                 <p class="text-gray-600 mb-4">Develop robust APIs and services with Node.js and scalable databases.</p>
-                <button class="gradient-btn text-sm py-2 px-4 rounded-full" onclick="showSection('careers')">Apply Now</button>
-                <div class="tooltip mt-2">
-                    <span class="text-hydro-blue cursor-pointer">Learn More</span>
+                <div class="w-full mt-2">
+                    <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Emphasize security, performance, and microservices architecture for fintech solutions.</span>
+                    <button class="gradient-btn w-full text-sm py-2 px-4 rounded-full" onclick="showSection('careers')">Apply Now</button>
                 </div>
             </div>
-            <div class="job-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+            <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">Blockchain Engineer</h3>
                 <p class="text-gray-600 mb-4">Design and implement blockchain infrastructure for secure transactions.</p>
-                <button class="gradient-btn text-sm py-2 px-4 rounded-full" onclick="showSection('careers')">Apply Now</button>
+               <button class="gradient-btn text-sm py-2 px-4 w-full rounded-full" onclick="showSection('careers')">Apply Now</button>
                 <div class="tooltip mt-2">
-                    <span class="text-hydro-blue cursor-pointer">Learn More</span>
+                                        <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Work on decentralized networks, consensus algorithms, and integration with finance systems.</span>
                 </div>
             </div>
-            <div class="job-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+            <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">Solidity Developer</h3>
                 <p class="text-gray-600 mb-4">Write secure smart contracts on Ethereum and other blockchains.</p>
-                <button class="gradient-btn text-sm py-2 px-4 rounded-full" onclick="showSection('careers')">Apply Now</button>
+               <button class="gradient-btn text-sm py-2 px-4 w-full rounded-full" onclick="showSection('careers')">Apply Now</button>
                 <div class="tooltip mt-2">
-                    <span class="text-hydro-blue cursor-pointer">Learn More</span>
+                                        <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Specialize in contract logic, security audits, and DeFi applications.</span>
                 </div>
             </div>
-            <div class="job-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+            <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">AI/ML Engineer</h3>
                 <p class="text-gray-600 mb-4">Create intelligent models to drive finance innovation with Python and TensorFlow.</p>
-                <button class="gradient-btn text-sm py-2 px-4 rounded-full" onclick="showSection('careers')">Apply Now</button>
+               <button class="gradient-btn text-sm py-2 px-4 w-full rounded-full" onclick="showSection('careers')">Apply Now</button>
                 <div class="tooltip mt-2">
-                    <span class="text-hydro-blue cursor-pointer">Learn More</span>
+                                        <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Leverage machine learning for risk assessment, predictive analytics, and automated decision-making.</span>
                 </div>
             </div>
-            <div class="job-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+            <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">Data Scientist</h3>
                 <p class="text-gray-600 mb-4">Analyze data to uncover actionable insights for strategic decisions.</p>
-                <button class="gradient-btn text-sm py-2 px-4 rounded-full" onclick="showSection('careers')">Apply Now</button>
+               <button class="gradient-btn text-sm py-2 px-4 w-full rounded-full" onclick="showSection('careers')">Apply Now</button>
                 <div class="tooltip mt-2">
-                    <span class="text-hydro-blue cursor-pointer">Learn More</span>
+                                        <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Use statistical models and big data tools to enhance financial services and user experience.</span>
                 </div>
             </div>
-            <div class="job-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+            <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">Data Analyst</h3>
                 <p class="text-gray-600 mb-4">Interpret complex datasets to support financial insights and operations.</p>
-                <button class="gradient-btn text-sm py-2 px-4 rounded-full" onclick="showSection('careers')">Apply Now</button>
+               <button class="gradient-btn text-sm py-2 px-4 w-full rounded-full" onclick="showSection('careers')">Apply Now</button>
                 <div class="tooltip mt-2">
-                    <span class="text-hydro-blue cursor-pointer">Learn More</span>
+                                        <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Focus on ETL processes, data visualization, and reporting for executive teams.</span>
                 </div>
             </div>
-            <div class="job-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+            <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">HR Manager</h3>
                 <p class="text-gray-600 mb-4">Manage talent acquisition, employee relations, and HR policies.</p>
-                <button class="gradient-btn text-sm py-2 px-4 rounded-full" onclick="showSection('careers')">Apply Now</button>
+               <button class="gradient-btn text-sm py-2 px-4 w-full rounded-full" onclick="showSection('careers')">Apply Now</button>
                 <div class="tooltip mt-2">
-                    <span class="text-hydro-blue cursor-pointer">Learn More</span>
+                                        <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Oversee recruitment, onboarding, and culture-building in a fast-paced fintech environment.</span>
                 </div>
             </div>
-            <div class="job-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+            <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">Marketing Specialist</h3>
                 <p class="text-gray-600 mb-4">Drive brand growth, customer engagement, and marketing campaigns.</p>
-                <button class="gradient-btn text-sm py-2 px-4 rounded-full" onclick="showSection('careers')">Apply Now</button>
+               <button class="gradient-btn text-sm py-2 px-4 w-full rounded-full" onclick="showSection('careers')">Apply Now</button>
                 <div class="tooltip mt-2">
-                    <span class="text-hydro-blue cursor-pointer">Learn More</span>
+                                        <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Develop digital strategies, content creation, and analytics for global reach.</span>
                 </div>
             </div>
