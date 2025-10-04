@@ -38,41 +38,74 @@
 </head>
 <body class="bg-white text-text-gray font-inter">
  
- <header id="header" class="bg-white p-4 shadow-sm sticky top-0 z-10">
-        <nav class="flex justify-between items-center max-w-7xl mx-auto">
-            <div class="text-hydro-blue font-black font-mono	 text-2xl hero-logo cursor-pointer flex flex-row items-center" onclick="showSection('home')">
-               <img src="/assets/logo.jpg" alt="HydroBank" style="width: 60px;">
-               HYDROBANK</div>
-            <ul class="flex space-x-8 text-lg font-semibold">
-                <li><a href="#" class="nav-link pb-1 hover:text-hydro-blue" data-section="home">Home</a></li>
-                <li><a href="#" class="nav-link pb-1 hover:text-hydro-blue" data-section="about">About</a></li>
-                <li><a href="#" class="nav-link pb-1 hover:text-hydro-blue" data-section="faq">FAQ</a></li>
-                <li><a href="./pages/form/form.html" class="font-bold hover:text-hydro-blue">Jobs</a></li>
-             
-               <a target="_blank" href="./pages/intern/internship.html" class=" font-bold hover:text-hydro-blue">Internship</a>
-               <a target="_blank" href="./pages/applications/applications.html" class="font-bold hover:text-hydro-blue">Team Login</a>
+<!-- Careers Header -->
+<header id="header" class="bg-white/80 backdrop-blur-md p-4 shadow-md sticky top-0 z-20">
+  <nav class="flex justify-between items-center max-w-7xl mx-auto">
+    <!-- Logo -->
+    <div class="cursor-pointer flex items-center gap-3" onclick="showSection('home')">
+      <img src="/assets/logo.jpg" alt="HydroBank" class="w-12 rounded-full shadow-md ring-2 ring-hydro-blue/50">
+      <span class="text-hydro-blue font-black font-mono text-2xl tracking-wider">HYDROBANK</span>
+    </div>
 
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <ul class="flex space-x-8 text-lg font-semibold items-center">
+      <li><a href="#" class="nav-link hover:text-hydro-blue" data-section="home">Home</a></li>
+      <li><a href="#" class="nav-link hover:text-hydro-blue" data-section="about">About</a></li>
+      <li><a href="#" class="nav-link hover:text-hydro-blue" data-section="faq">FAQ</a></li>
+      <li><a href="./pages/form/form.html" class="font-bold hover:text-hydro-blue">Jobs</a></li>
+      <li><a target="_blank" href="./pages/intern/internship.html" class="font-bold hover:text-hydro-blue">Internship</a></li>
+      <li><a target="_blank" href="./pages/applications/applications.html" class="font-bold hover:text-hydro-blue">Team Login</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- Sections -->
-    <!-- Home Section -->
-    <section id="home" class="section active p-8 max-w-[100rem] mx-auto">
-        <div class="text-center mb-12 fade-in">
-          
-            <h1 class="text-hydro-blue text-6xl hero-logo mb-4">
-               HYDROBANK</h1>
-            <h2 class="text-4xl font-semibold mb-8">Join the Future of Finance at Hydro Bank</h2>
-            <a href="./pages/form/form.html" target="_blank" class="gradient-btn text-black text-white font-bold py-3 px-8 rounded-full" >Apply Now</a>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
+<!-- Careers Hero Section -->
+<section id="home" class="relative section  flex items-center justify-center w-full active p-10 max-w-[100rem] mx-auto">
+  <div class="grid justify-center md:grid-cols-2 gap-12 my-6 items-center mt-10">
+    <!-- Text -->
+    <div class="text-center md:text-left fade-in">
+      <h1 class="text-6xl md:text-8xl font-black hero-logo mb-10 bg-gradient-to-r from-hydro-blue via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+        Careers at HydroBank
+      </h1>
+      <p class="text-3xl font-semibold text-slate-600 mb-8">
+        Be part of the future of decentralized finance. Explore exciting opportunities where innovation meets impact.
+      </p>
+      <a href="./pages/form/form.html" target="_blank" 
+         class="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+         Apply Now
+      </a>
+    </div>
+
+    <!-- Illustration -->
+    <div class="hidden  md:block">
+      <img src="https://cdni.iconscout.com/illustration/premium/thumb/programmer-working-on-web-design-on-computers-illustration-svg-download-png-11697962.png" alt="Careers at HydroBank" class="w-full max-w-md mx-auto drop-shadow-lg">
+    </div>
+  </div>
+</section>
+
+<!-- Job Categories Filter -->
+<!-- <div class="max-w-5xl mx-auto text-center mt-16 mb-10">
+  <div class="inline-flex space-x-3 bg-slate-100 p-2 rounded-full shadow-inner">
+    <button class="px-4 py-2 rounded-full bg-hydro-blue text-white text-sm font-semibold">All</button>
+    <button class="px-4 py-2 rounded-full hover:bg-slate-200 text-sm font-medium">Frontend</button>
+    <button class="px-4 py-2 rounded-full hover:bg-slate-200 text-sm font-medium">Backend</button>
+    <button class="px-4 py-2 rounded-full hover:bg-slate-200 text-sm font-medium">Blockchain</button>
+    <button class="px-4 py-2 rounded-full hover:bg-slate-200 text-sm font-medium">Non-Tech</button>
+  </div>
+</div> -->
+
+<!-- Job Listings Grid -->
+<section class="relative bg-gradient-to-br from-slate-50 via-white to-slate-100 py-16 px-6">
+  <div class="grid grid-cols-1 max-w-7xl mx-auto md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
             <!-- Job Cards -->
             <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip" >
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">Frontend Developer</h3>
                 <p class="text-gray-600 mb-4">Build sleek, responsive user interfaces with React and modern JavaScript.</p>
                 <div class="w-full mt-2">
-                    <button class="gradient-btn text-sm py-2 px-4 rounded-full w-full" onclick="showSection('careers')">Apply Now</button>
+                    <a href="./pages/form/form.html" target="_blank" 
+         class="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+         Apply Now
+      </a>
                     <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Focus on UI/UX, mobile-first design, and integration with backend APIs. Ideal for creative minds.</span>
                 </div>
@@ -83,13 +116,19 @@
                 <div class="w-full mt-2">
                     <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Emphasize security, performance, and microservices architecture for fintech solutions.</span>
-                    <button class="gradient-btn w-full text-sm py-2 px-4 rounded-full" onclick="showSection('careers')">Apply Now</button>
+                   <a href="./pages/form/form.html" target="_blank" 
+         class="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+         Apply Now
+      </a>
                 </div>
             </div>
             <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">Blockchain Engineer</h3>
                 <p class="text-gray-600 mb-4">Design and implement blockchain infrastructure for secure transactions.</p>
-               <button class="gradient-btn text-sm py-2 px-4 w-full rounded-full" onclick="showSection('careers')">Apply Now</button>
+               <a href="./pages/form/form.html" target="_blank" 
+         class="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+         Apply Now
+      </a>
                 <div class="tooltip mt-2">
                                         <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Work on decentralized networks, consensus algorithms, and integration with finance systems.</span>
@@ -98,7 +137,10 @@
             <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">Solidity Developer</h3>
                 <p class="text-gray-600 mb-4">Write secure smart contracts on Ethereum and other blockchains.</p>
-               <button class="gradient-btn text-sm py-2 px-4 w-full rounded-full" onclick="showSection('careers')">Apply Now</button>
+               <a href="./pages/form/form.html" target="_blank" 
+         class="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+         Apply Now
+      </a>
                 <div class="tooltip mt-2">
                                         <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Specialize in contract logic, security audits, and DeFi applications.</span>
@@ -107,7 +149,10 @@
             <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">AI/ML Engineer</h3>
                 <p class="text-gray-600 mb-4">Create intelligent models to drive finance innovation with Python and TensorFlow.</p>
-               <button class="gradient-btn text-sm py-2 px-4 w-full rounded-full" onclick="showSection('careers')">Apply Now</button>
+               <a href="./pages/form/form.html" target="_blank" 
+         class="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+         Apply Now
+      </a>
                 <div class="tooltip mt-2">
                                         <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Leverage machine learning for risk assessment, predictive analytics, and automated decision-making.</span>
@@ -116,7 +161,10 @@
             <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">Data Scientist</h3>
                 <p class="text-gray-600 mb-4">Analyze data to uncover actionable insights for strategic decisions.</p>
-               <button class="gradient-btn text-sm py-2 px-4 w-full rounded-full" onclick="showSection('careers')">Apply Now</button>
+               <a href="./pages/form/form.html" target="_blank" 
+         class="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+         Apply Now
+      </a>
                 <div class="tooltip mt-2">
                                         <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Use statistical models and big data tools to enhance financial services and user experience.</span>
@@ -125,7 +173,10 @@
             <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">Data Analyst</h3>
                 <p class="text-gray-600 mb-4">Interpret complex datasets to support financial insights and operations.</p>
-               <button class="gradient-btn text-sm py-2 px-4 w-full rounded-full" onclick="showSection('careers')">Apply Now</button>
+               <a href="./pages/form/form.html" target="_blank" 
+         class="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+         Apply Now
+      </a>
                 <div class="tooltip mt-2">
                                         <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Focus on ETL processes, data visualization, and reporting for executive teams.</span>
@@ -134,7 +185,10 @@
             <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">HR Manager</h3>
                 <p class="text-gray-600 mb-4">Manage talent acquisition, employee relations, and HR policies.</p>
-               <button class="gradient-btn text-sm py-2 px-4 w-full rounded-full" onclick="showSection('careers')">Apply Now</button>
+               <a href="./pages/form/form.html" target="_blank" 
+         class="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+         Apply Now
+      </a>
                 <div class="tooltip mt-2">
                                         <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Oversee recruitment, onboarding, and culture-building in a fast-paced fintech environment.</span>
@@ -143,14 +197,32 @@
             <div class="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
                 <h3 class="text-slate-800 text-hydro-blue font-bold text-xl mb-2">Marketing Specialist</h3>
                 <p class="text-gray-600 mb-4">Drive brand growth, customer engagement, and marketing campaigns.</p>
-               <button class="gradient-btn text-sm py-2 px-4 w-full rounded-full" onclick="showSection('careers')">Apply Now</button>
+               <a href="./pages/form/form.html" target="_blank" 
+         class="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+         Apply Now
+      </a>
                 <div class="tooltip mt-2">
                                         <!-- //<span class="text-hydro-blue cursor-pointer">Learn More</span> -->
                     <span class="tooltiptext">Develop digital strategies, content creation, and analytics for global reach.</span>
                 </div>
             </div>
         </div>
-    </section>
+
+</section>
+
+<!-- CTA Footer Section -->
+<section class="bg-slate-900 py-16 text-center">
+  <h2 class="text-3xl font-bold text-white mb-4">Didn’t find your role?</h2>
+  <p class="text-slate-400 mb-6">We’re always looking for passionate people. Send us your profile and we’ll get in touch.</p>
+  <a href="./pages/form/form.html" target="_blank" class="gradient-btn px-8 py-3 rounded-full font-semibold shadow hover:shadow-lg">
+    Submit Application
+  </a>
+</section>
+
+
+    <!-- Sections -->
+    <!-- Home Section -->
+  
 
     <!-- About Section -->
     <section id="about" class="section p-8 max-w-4xl mx-auto fade-in">
