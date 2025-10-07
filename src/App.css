@@ -1,27 +1,14 @@
 @import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap"); */
 
 body {
-  font-family: "SUSE Mono", sans-serif;
-  /* font-family: "Inter", sans-serif; */
+  /* font-family: "SUSE Mono", sans-serif; */
+  font-family: "Inter", sans-serif;
   color: #374151; /* softer gray */
-  background-image: linear-gradient(to bottom right, #f9fafb, #dae6ed, #e0e7ff);
+  background-image: linear-gradient(to bottom right, #0d0d0d, #000000, #0d101b);
   line-height: 1.6;
   font-weight: 700;
-}
-
-/* HERO LOGO */
-.hero-logo {
-  font-family: "SUSE Mono", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  transition: transform 0.2s ease;
-}
-.hero-logo:hover {
-  transform: scale(1.05);
 }
 
 nav {
@@ -57,9 +44,26 @@ nav {
   color: #fff;
   transition: all 0.3s ease;
 }
+
 .gradient-btn:hover {
   box-shadow: 0 0 15px rgba(20, 71, 230, 0.6);
   transform: translateY(-2px);
+}
+
+.border-b-gradient {
+  border-bottom: 3px solid;
+  border-image: linear-gradient(90deg, #06b6d4, #ec4899, #facc15, #06b6d4);
+  border-image-slice: 1;
+  animation: gradientFlow 6s linear infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    border-image-source: linear-gradient(90deg, #06b6d4, #ec4899, #facc15);
+  }
+  100% {
+    border-image-source: linear-gradient(90deg, #facc15, #06b6d4, #ec4899);
+  }
 }
 
 /* FAQ */

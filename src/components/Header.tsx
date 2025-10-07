@@ -1,85 +1,36 @@
-import React from "react";
+import Logo from "../assets/hydrobank.jpeg";
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   return (
-    <header
-      id="header"
-      className="bg-white/80 backdrop-blur-md p-4 shadow-md sticky top-0 z-20"
-    >
-      <nav className="flex justify-between items-center max-w-7xl mx-auto">
-        <div
-          className="cursor-pointer flex items-center gap-3"
-          //     onclick={() => null}
-        >
-          <img
-            src="/assets/logo.jpg"
-            alt="HydroBank"
-            className="w-12 rounded-full shadow-md ring-2 ring-hydro-blue/50"
-          />
-          <span className="text-hydro-blue font-black font-mono text-2xl tracking-wider">
-            HYDROBANK
-          </span>
+    <nav className="bg-black text-white px-8 py-4 border-b-[3px] border-b-gradient">
+      <div className="flex items-center justify-between max-w-7xl mx-auto">
+        {/* Logo */}
+        <div className="flex items-center gap-2">
+          <img src={Logo} alt="Logo" className="w-14 h-14 rounded-full" />
+          <h1 className=" font-bold text-2xl text-blue-500">HYDRO BANK</h1>
         </div>
 
-        <ul className="flex space-x-8 text-lg font-semibold items-center">
-          <li>
-            <a
-              href="#"
-              className="nav-link hover:text-hydro-blue"
-              data-section="home"
+        {/* Nav Links */}
+        <ul className="hidden md:flex items-center gap-10">
+          {["Home", "About", "FAQ", "Jobs", "Internship"].map((item) => (
+            <li
+              key={item}
+              className="group relative cursor-pointer font-semibold"
             >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="nav-link hover:text-hydro-blue"
-              data-section="about"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="nav-link hover:text-hydro-blue"
-              data-section="faq"
-            >
-              FAQ
-            </a>
-          </li>
-          <li>
-            <a
-              href="./pages/form/form.html"
-              className="font-bold hover:text-hydro-blue"
-            >
-              Jobs
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="./pages/intern/internship.html"
-              className="font-bold hover:text-hydro-blue"
-            >
-              Internship
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="./pages/applications/applications.html"
-              className="font-bold hover:text-hydro-blue"
-            >
-              Team Login
-            </a>
-          </li>
+              <span className="text-white text-xl">{item}</span>
+              <span className="absolute left-0 -bottom-1 w-full h-[3px] bg-gradient-to-r from-cyan-400 via-pink-500 to-yellow-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
+            </li>
+          ))}
         </ul>
-      </nav>
-    </header>
+
+        {/* Mobile Menu Icon */}
+        <div className="md:hidden flex flex-col gap-1 cursor-pointer">
+          <span className="w-6 h-[3px] bg-gradient-to-r from-cyan-400 via-pink-500 to-yellow-400 rounded-full"></span>
+          <span className="w-6 h-[3px] bg-gradient-to-r from-cyan-400 via-pink-500 to-yellow-400 rounded-full"></span>
+          <span className="w-6 h-[3px] bg-gradient-to-r from-cyan-400 via-pink-500 to-yellow-400 rounded-full"></span>
+        </div>
+      </div>
+    </nav>
   );
 };
 
