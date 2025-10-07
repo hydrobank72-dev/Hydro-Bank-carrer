@@ -26,10 +26,10 @@ const JobCard: React.FC = () => {
         Open Positions
       </h2>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {jobList.map((job) => (
           <div key={job.id} className="flex flex-col items-center job-card">
-            {/* Card with perfect-fit image */}
+            {/* Card with image */}
             <div
               className="relative overflow-hidden transition-transform duration-300 hover:scale-105"
               style={{
@@ -47,14 +47,25 @@ const JobCard: React.FC = () => {
               />
             </div>
 
-            {/* Job title + button */}
-            <div className="text-center mt-6 px-4">
-              <h3 className="text-white font-extrabold text-2xl mb-3">{job.title}</h3>
+            {/* Job title + stacked buttons */}
+            <div className="text-center mt-6 px-4 flex flex-col gap-3 items-center">
+              <h3 className="text-white font-extrabold text-2xl">{job.title}</h3>
+
+              
+
               <a
                 href={job.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="apply-btn inline-block font-semibold text-white py-3 px-10 rounded-full text-lg transition-transform duration-300"
+                className="learn-btn"
+              >
+                Learn More
+              </a>
+              <a
+                href={job.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="apply-btn"
               >
                 Apply Now
               </a>
@@ -64,7 +75,7 @@ const JobCard: React.FC = () => {
       </div>
 
       {/* Footer glow bar */}
-      <div className="mt-20 h-1 w-2/3 mx-auto bg-gradient-to-r from-cyan-400 to-fuchsia-500 rounded-full shadow-lg shadow-cyan-500/30"></div>
+      <div className="footer-glow"></div>
     </section>
   );
 };
