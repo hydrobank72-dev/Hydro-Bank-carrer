@@ -1,207 +1,70 @@
 import React from "react";
 
-type Props = {};
+interface Job {
+  id: number;
+  title: string;
+  image: string;
+  link: string;
+}
 
-const JobCard = (props: Props) => {
+const JobCard: React.FC = () => {
+  const jobList: Job[] = [
+    { id: 1, title: "Frontend Developer", image: "./src/assets/frontend.jpg", link: "./pages/form/form.html" },
+    { id: 2, title: "App Developer", image: "./src/assets/appdevelopment.jpg", link: "./pages/form/form.html" },
+    { id: 3, title: "Blockchain Engineer", image: "./src/assets/blockchain.jpg", link: "./pages/form/form.html" },
+    { id: 4, title: "AI / ML Engineer", image: "./src/assets/ai-ml.jpg", link: "./pages/form/form.html" },
+    { id: 5, title: "Deep Learning", image: "./src/assets/deeplearning.jpg", link: "./pages/form/form.html" },
+    { id: 6, title: "Data Scientist", image: "./src/assets/data-scientist.jpg", link: "./pages/form/form.html" },
+    { id: 7, title: "HR Manager", image: "./src/assets/hr-team.jpg", link: "./pages/form/form.html" },
+    { id: 8, title: "Marketing Specialist", image: "./src/assets/marketing-team.jpg", link: "./pages/form/form.html" },
+    { id: 9, title: "Product Team", image: "./src/assets/product-team.jpg", link: "./pages/form/form.html" },
+  ];
+
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-white to-slate-100 py-16 px-6">
-      <div className="grid grid-cols-1 max-w-7xl mx-auto md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
-        <div className="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
-          <h3 className="text-slate-800 text-hydro-blue font-bold text-xl mb-2">
-            Frontend Developer
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Build sleek, responsive user interfaces with React and modern
-            JavaScript.
-          </p>
-          <div className="w-full mt-2">
-            <a
-              href="./pages/form/form.html"
-              target="_blank"
-              className="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Apply Now
-            </a>
+    <section className="bg-black py-20 px-8 text-center">
+      <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-500 mb-16">
+        Open Positions
+      </h2>
 
-            <span className="tooltiptext">
-              Focus on UI/UX, mobile-first design, and integration with backend
-              APIs. Ideal for creative minds.
-            </span>
-          </div>
-        </div>
-        <div className="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
-          <h3 className="text-slate-800 text-hydro-blue font-bold text-xl mb-2">
-            Backend Developer
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Develop robust APIs and services with Node.js and scalable
-            databases.
-          </p>
-          <div className="w-full mt-2">
-            <span className="tooltiptext">
-              Emphasize security, performance, and microservices architecture
-              for fintech solutions.
-            </span>
-            <a
-              href="./pages/form/form.html"
-              target="_blank"
-              className="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {jobList.map((job) => (
+          <div key={job.id} className="flex flex-col items-center job-card">
+            {/* Card with perfect-fit image */}
+            <div
+              className="relative overflow-hidden transition-transform duration-300 hover:scale-105"
+              style={{
+                border: "16px solid",
+                borderImage: "linear-gradient(90deg, #00fafa, #8d23ff) 1",
+                backgroundColor: "#000",
+                borderRadius: "16px",
+              }}
             >
-              Apply Now
-            </a>
+              <img
+                src={job.image}
+                alt={job.title}
+                className="w-full h-80 object-cover block"
+                style={{ borderRadius: "0" }}
+              />
+            </div>
+
+            {/* Job title + button */}
+            <div className="text-center mt-6 px-4">
+              <h3 className="text-white font-extrabold text-2xl mb-3">{job.title}</h3>
+              <a
+                href={job.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="apply-btn inline-block font-semibold text-white py-3 px-10 rounded-full text-lg transition-transform duration-300"
+              >
+                Apply Now
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
-          <h3 className="text-slate-800 text-hydro-blue font-bold text-xl mb-2">
-            Blockchain Engineer
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Design and implement blockchain infrastructure for secure
-            transactions.
-          </p>
-          <a
-            href="./pages/form/form.html"
-            target="_blank"
-            className="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Apply Now
-          </a>
-          <div className="tooltip mt-2">
-            <span className="tooltiptext">
-              Work on decentralized networks, consensus algorithms, and
-              integration with finance systems.
-            </span>
-          </div>
-        </div>
-        <div className="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
-          <h3 className="text-slate-800 text-hydro-blue font-bold text-xl mb-2">
-            Solidity Developer
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Write secure smart contracts on Ethereum and other blockchains.
-          </p>
-          <a
-            href="./pages/form/form.html"
-            target="_blank"
-            className="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Apply Now
-          </a>
-          <div className="tooltip mt-2">
-            <span className="tooltiptext">
-              Specialize in contract logic, security audits, and DeFi
-              applications.
-            </span>
-          </div>
-        </div>
-        <div className="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
-          <h3 className="text-slate-800 text-hydro-blue font-bold text-xl mb-2">
-            AI/ML Engineer
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Create intelligent models to drive finance innovation with Python
-            and TensorFlow.
-          </p>
-          <a
-            href="./pages/form/form.html"
-            target="_blank"
-            className="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Apply Now
-          </a>
-          <div className="tooltip mt-2">
-            <span className="tooltiptext">
-              Leverage machine learning for risk assessment, predictive
-              analytics, and automated decision-making.
-            </span>
-          </div>
-        </div>
-        <div className="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
-          <h3 className="text-slate-800 text-hydro-blue font-bold text-xl mb-2">
-            Data Scientist
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Analyze data to uncover actionable insights for strategic decisions.
-          </p>
-          <a
-            href="./pages/form/form.html"
-            target="_blank"
-            className="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Apply Now
-          </a>
-          <div className="tooltip mt-2">
-            <span className="tooltiptext">
-              Use statistical models and big data tools to enhance financial
-              services and user experience.
-            </span>
-          </div>
-        </div>
-        <div className="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
-          <h3 className="text-slate-800 text-hydro-blue font-bold text-xl mb-2">
-            Data Analyst
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Interpret complex datasets to support financial insights and
-            operations.
-          </p>
-          <a
-            href="./pages/form/form.html"
-            target="_blank"
-            className="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Apply Now
-          </a>
-          <div className="tooltip mt-2">
-            <span className="tooltiptext">
-              Focus on ETL processes, data visualization, and reporting for
-              executive teams.
-            </span>
-          </div>
-        </div>
-        <div className="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
-          <h3 className="text-slate-800 text-hydro-blue font-bold text-xl mb-2">
-            HR Manager
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Manage talent acquisition, employee relations, and HR policies.
-          </p>
-          <a
-            href="./pages/form/form.html"
-            target="_blank"
-            className="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Apply Now
-          </a>
-          <div className="tooltip mt-2">
-            <span className="tooltiptext">
-              Oversee recruitment, onboarding, and culture-building in a
-              fast-paced fintech environment.
-            </span>
-          </div>
-        </div>
-        <div className="job-card bg-white flex items-start gap-2 justify-center flex-col rounded-lg shadow-lg py-6 px-4 border rounded-xl border-gray-200 tooltip">
-          <h3 className="text-slate-800 text-hydro-blue font-bold text-xl mb-2">
-            Marketing Specialist
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Drive brand growth, customer engagement, and marketing campaigns.
-          </p>
-          <a
-            href="./pages/form/form.html"
-            target="_blank"
-            className="gradient-btn font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Apply Now
-          </a>
-          <div className="tooltip mt-2">
-            <span className="tooltiptext">
-              Develop digital strategies, content creation, and analytics for
-              global reach.
-            </span>
-          </div>
-        </div>
+        ))}
       </div>
+
+      {/* Footer glow bar */}
+      <div className="mt-20 h-1 w-2/3 mx-auto bg-gradient-to-r from-cyan-400 to-fuchsia-500 rounded-full shadow-lg shadow-cyan-500/30"></div>
     </section>
   );
 };
