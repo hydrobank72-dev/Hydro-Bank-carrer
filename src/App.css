@@ -1,14 +1,20 @@
 @import "tailwindcss";
 
-/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap"); */
-
 body {
-  /* font-family: "SUSE Mono", sans-serif; */
-  font-family: "Inter", sans-serif;
+  font-family: "Merriweather", serif;
+  /* font-family: "Inter", sans-serif; */
   color: #374151; /* softer gray */
   background-image: linear-gradient(to bottom right, #0d0d0d, #000000, #0d101b);
   line-height: 1.6;
   font-weight: 700;
+}
+
+.font-outfit {
+  font-family: "Outfit", sans-serif;
+}
+
+.font-susi {
+  font-family: "SUSE Mono", sans-serif;
 }
 
 nav {
@@ -54,8 +60,8 @@ nav {
   border-image: linear-gradient(
     59deg,
     rgba(20, 71, 230, 0.6) 40%,
-    rgba(236, 72, 153, 1) 50%,
-    rgba(195, 199, 64, 1) 60%,
+    rgb(236, 118, 72) 50%,
+    rgb(199, 152, 64) 60%,
     rgba(6, 182, 212, 1) 100%
   );
   border-image-slice: 1;
@@ -66,8 +72,8 @@ nav {
   background: linear-gradient(
     59deg,
     rgba(20, 71, 230, 0.6) 40%,
-    rgba(236, 72, 153, 1) 50%,
-    rgba(195, 199, 64, 1) 60%,
+    rgb(236, 118, 72) 50%,
+    rgb(199, 152, 64) 60%,
     rgba(6, 182, 212, 1) 100%
   );
 }
@@ -76,8 +82,8 @@ nav {
   background: linear-gradient(
     59deg,
     rgba(20, 71, 230, 0.6) 40%,
-    rgba(236, 72, 153, 1) 50%,
-    rgba(195, 199, 64, 1) 60%,
+    rgb(236, 118, 72) 50%,
+    rgb(199, 152, 64) 60%,
     rgba(6, 182, 212, 1) 100%
   );
   color: transparent;
@@ -143,13 +149,14 @@ nav {
 /* Neon gradient button */
 .apply-btn {
   background: linear-gradient(
-    100deg,
-    rgba(20, 71, 230, 1) 20%,
-    rgba(236, 72, 153, 0.9) 50%,
-    rgba(195, 199, 64, 1) 60%,
-    rgba(6, 182, 212, 0.7) 100%
+    59deg,
+    rgba(20, 71, 230, 0.6) 40%,
+    rgb(236, 118, 72) 50%,
+    rgb(199, 152, 64) 60%,
+    rgba(6, 182, 212, 1) 100%
   );
   color: white;
+  padding: 20px 30px;
   border: none;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.4), 0 0 20px rgba(141, 35, 255, 0.3);
@@ -183,16 +190,17 @@ div[style*="border-image"]:hover {
 }
 
 /* BUTTONS */
-.apply-btn, .learn-btn {
+.apply-btn,
+.learn-btn {
   font-size: 17px;
   padding: 1ch 2ch;
-  width:200px;
+  width: 200px;
   border: none;
   border-radius: 16px 48px 16px 48px; /* top-left, top-right, bottom-right, bottom-left */
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   font-family: "Montserrat", sans-serif;
-  
+
   font-weight: 800; /* bolder text */
   text-align: center;
   letter-spacing: 1px; /* adds some spacing for sharp look */
@@ -229,10 +237,18 @@ div[style*="border-image"]:hover {
 
 /* FADE-IN ANIMATION */
 @keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.job-card, .apply-btn, .learn-btn {
+.job-card,
+.apply-btn,
+.learn-btn {
   animation: fadeInUp 1s ease forwards;
 }
 
@@ -258,7 +274,3 @@ div[style*="border-image"]:hover {
   background: #eef2ff;
   color: #1c398e;
 }
-
-
-
-
