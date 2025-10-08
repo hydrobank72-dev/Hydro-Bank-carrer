@@ -1,2 +1,2 @@
 ## HydroBank Careers Site
-<img width="1296" height="800" alt="Screenshot 2025-09-13 220245" src="https://github.com/user-attachments/assets/983052b5-4606-4ce6-886d-e477ff122dc0" />
+<img width="1047" height="665" alt="Screenshot 2025-10-08 014500" src="https://github.com/user-attachments/assets/8360ad6f-0f24-4fe6-97af-e4b5ba0f2c20" />

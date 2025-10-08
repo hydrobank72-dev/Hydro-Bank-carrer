@@ -142,7 +142,14 @@ nav {
 
 /* Neon gradient button */
 .apply-btn {
-  background: linear-gradient(90deg, #00fafa, #8d23ff);
+  background: linear-gradient(
+    100deg,
+    rgba(20, 71, 230, 1) 20%,
+    rgba(236, 72, 153, 0.9) 50%,
+    rgba(195, 199, 64, 1) 60%,
+    rgba(6, 182, 212, 0.7) 100%
+  );
+  color: white;
   border: none;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.4), 0 0 20px rgba(141, 35, 255, 0.3);
