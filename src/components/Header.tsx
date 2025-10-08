@@ -2,7 +2,7 @@ import Logo from "../assets/hydrobank.jpeg";
 
 const Header = () => {
   return (
-    <nav className="bg-black font-outfit text-white px-8 py-4 border-b-[5px] border-b-gradient top-0 sticky z-10">
+    <nav className="gradient-bg font-outfit text-white px-8 py-4 border-b-[5px] border-b-gradient top-0 sticky z-10">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -12,12 +12,15 @@ const Header = () => {
 
         {/* Nav Links */}
         <ul className="hidden md:flex items-center gap-10">
-          {["Home", "About", "FAQ", "Jobs", "Internship"].map((item) => (
+          {["About", "FAQ", "Jobs", "Internship"].map((item) => (
             <li
               key={item}
               className="group relative cursor-pointer font-semibold"
             >
-              <span className="text-white text-xl">{item}</span>
+              <a className="text-white text-xl" href={`#${item.toLowerCase()}`}>
+                {item}
+              </a>
+              {/* <span >{item}</span> */}
               <span className="absolute left-0 -bottom-1 w-full h-[3px] bg-gradient-to-r from-cyan-400 via-pink-500 to-yellow-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
             </li>
           ))}

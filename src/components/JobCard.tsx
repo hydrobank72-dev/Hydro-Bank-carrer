@@ -3,7 +3,7 @@ import { jobList } from "../utils/data";
 
 const JobCard: React.FC = () => {
   return (
-    <section className="bg-black py-20 px-8 text-center">
+    <section id="jobs" className="bg-black py-20 px-8 text-center">
       <h2 className="text-4xl font-extrabold  gradient-primary-text mb-16">
         Open Jobs at Hydro Bank
       </h2>

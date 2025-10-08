@@ -4,7 +4,7 @@ type Props = {};
 
 const CTA = (props: Props) => {
   return (
-    <section className="bg-slate-900 py-16 text-center">
+    <section className="gradient-bg py-16 text-center">
       <h2 className="text-3xl font-bold text-white mb-4">
         Didn’t find your role?
       </h2>
