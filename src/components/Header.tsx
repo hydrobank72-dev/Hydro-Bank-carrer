@@ -2,12 +2,12 @@ import Logo from "../assets/hydrobank.jpeg";
 
 const Header = () => {
   return (
-    <nav className="bg-black text-white px-8 py-4 border-b-[3px] border-b-gradient top-0 sticky z-10">
+    <nav className="bg-black text-white px-8 py-4 border-b-[5px] border-b-gradient top-0 sticky z-10">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <img src={Logo} alt="Logo" className="w-14 h-14 rounded-full" />
-          <h1 className=" font-bold text-2xl text-blue-500">HYDRO BANK</h1>
+          <h1 className=" font-bold text-2xl text-blue-500">HYDROBANK</h1>
         </div>
 
         {/* Nav Links */}
