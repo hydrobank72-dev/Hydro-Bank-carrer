@@ -34,8 +34,8 @@ const JobCard: React.FC = () => {
             </div>
 
             {/* Job title + button */}
-            <div className="text-center mt-6 px-4">
-              <h3 className="text-white font-extrabold text-2xl mb-3">
+            <div className="text-center mt-6  px-4">
+              <h3 className="text-white font-extrabold text-2xl mb-6 ">
                 {job.title}
               </h3>
               <a

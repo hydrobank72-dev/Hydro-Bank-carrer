@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-            <span className="gradient-text">HYDROBANK</span>{" "}
+            <span className="gradient-primary-text">HYDROBANK</span>{" "}
             <span className="text-white">Careers</span>
           </h1>
 
@@ -77,10 +77,10 @@ const Hero: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
-        <h2 className="text-4xl font-bold text-cyan-400 mb-4">
+        <h2 className="text-4xl font-bold gradient-primary-text mb-4">
           Why Choose Hydro Bank?
         </h2>
-        <p className="text-gray-300 text-2xl leading-relaxed">
+        <p className="text-gray-300 text-2xl leading-relaxed font-outfit">
           We’re shaping the next generation of banking — one that’s fast, human,
           and visionary. At Hydro Bank, you’ll work with talented creators,
           engineers, and designers who share one goal: to make finance simple

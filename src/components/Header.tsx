@@ -2,7 +2,7 @@ import Logo from "../assets/hydrobank.jpeg";
 
 const Header = () => {
   return (
-    <nav className="bg-black text-white px-8 py-4 border-b-[5px] border-b-gradient top-0 sticky z-10">
+    <nav className="bg-black font-outfit text-white px-8 py-4 border-b-[5px] border-b-gradient top-0 sticky z-10">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex items-center gap-2">
