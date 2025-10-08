@@ -1,27 +1,14 @@
 @import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap"); */
 
 body {
-  font-family: "SUSE Mono", sans-serif;
-  /* font-family: "Inter", sans-serif; */
+  /* font-family: "SUSE Mono", sans-serif; */
+  font-family: "Inter", sans-serif;
   color: #374151; /* softer gray */
-  background-image: linear-gradient(to bottom right, #f9fafb, #dae6ed, #e0e7ff);
+  background-image: linear-gradient(to bottom right, #0d0d0d, #000000, #0d101b);
   line-height: 1.6;
   font-weight: 700;
-}
-
-/* HERO LOGO */
-.hero-logo {
-  font-family: "SUSE Mono", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  transition: transform 0.2s ease;
-}
-.hero-logo:hover {
-  transform: scale(1.05);
 }
 
 nav {
@@ -57,9 +44,26 @@ nav {
   color: #fff;
   transition: all 0.3s ease;
 }
+
 .gradient-btn:hover {
   box-shadow: 0 0 15px rgba(20, 71, 230, 0.6);
   transform: translateY(-2px);
+}
+
+.border-b-gradient {
+  border-bottom: 3px solid;
+  border-image: linear-gradient(90deg, #06b6d4, #ec4899, #facc15, #06b6d4);
+  border-image-slice: 1;
+  animation: gradientFlow 6s linear infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    border-image-source: linear-gradient(90deg, #06b6d4, #ec4899, #facc15);
+  }
+  100% {
+    border-image-source: linear-gradient(90deg, #facc15, #06b6d4, #ec4899);
+  }
 }
 
 /* FAQ */
@@ -107,26 +111,29 @@ nav {
   color: #1c398e;
 }
 
-
 /* Neon gradient button */
 .apply-btn {
-  background: linear-gradient(90deg, #00fafa, #8d23ff);
+  background: linear-gradient(
+    100deg,
+    rgba(20, 71, 230, 1) 20%,
+    rgba(236, 72, 153, 0.9) 50%,
+    rgba(195, 199, 64, 1) 60%,
+    rgba(6, 182, 212, 0.7) 100%
+  );
+  color: white;
   border: none;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4),
-              0 0 20px rgba(141, 35, 255, 0.3);
+  box-shadow: 0 0 10px rgba(8, 37, 141, 0.4), 0 0 20px rgba(63, 1, 130, 0.3);
 }
 
 .apply-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5),
-              0 0 40px rgba(141, 35, 255, 0.5);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5), 0 0 40px rgba(141, 35, 255, 0.5);
 }
 
 /* Subtle glow for border box on hover */
 div[style*="border-image"]:hover {
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3),
-              0 0 35px rgba(141, 35, 255, 0.3);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3), 0 0 35px rgba(141, 35, 255, 0.3);
 }
 
 /* Fade-in animation for smooth entrance */
@@ -174,16 +181,21 @@ div[style*="border-image"]:hover {
   box-shadow: 0 0 25px rgba(0, 255, 255, 0.5), 0 0 40px rgba(141, 35, 255, 0.5);
 }
 
-/* Learn More - reversed gradient */
-.learn-btn {
-  background: linear-gradient(90deg, hsl(303, 69%, 41%), #00fafa);
-  color: #fff;
-  border-radius: 10px 68px 10px 68px; /* top-left, top-right, bottom-right, bottom-left */
-  box-shadow: 0 0 10px rgba(141, 35, 255, 0.4), 0 0 20px rgba(0, 255, 255, 0.3);
-}
-.learn-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(141, 35, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.5);
+/* From Uiverse.io by ZacharyCrespin  */
+.apply-btn {
+  transition: all 0.5s;
+  font-size: 17px;
+  padding: 1ch 2ch;
+  background-color: white;
+  color: #000;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 2px 2px 0px hsl(0, 0%, 90%), 4px 4px 0px hsl(0, 0%, 80%),
+    6px 6px 0px hsl(0, 0%, 70%), 8px 8px 0px hsl(0, 0%, 60%),
+    10px 10px 0px hsl(0, 0%, 50%), 12px 12px 0px hsl(0, 0%, 40%),
+    14px 14px 0px hsl(0, 0%, 30%), 16px 16px 0px hsl(0, 0%, 20%),
+    18px 18px 0px hsl(0, 0%, 10%);
 }
 
 /* FADE-IN ANIMATION */
