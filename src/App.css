@@ -51,18 +51,47 @@ nav {
 }
 
 .border-b-gradient {
-  border-bottom: 3px solid;
-  border-image: linear-gradient(90deg, #06b6d4, #ec4899, #facc15, #06b6d4);
+  border-image: linear-gradient(
+    59deg,
+    rgba(20, 71, 230, 0.6) 40%,
+    rgba(236, 72, 153, 1) 50%,
+    rgba(195, 199, 64, 1) 60%,
+    rgba(6, 182, 212, 1) 100%
+  );
   border-image-slice: 1;
   animation: gradientFlow 6s linear infinite;
 }
 
+.gradient-primary {
+  background: linear-gradient(
+    59deg,
+    rgba(20, 71, 230, 0.6) 40%,
+    rgba(236, 72, 153, 1) 50%,
+    rgba(195, 199, 64, 1) 60%,
+    rgba(6, 182, 212, 1) 100%
+  );
+}
+
+.gradient-primary-text {
+  background: linear-gradient(
+    59deg,
+    rgba(20, 71, 230, 0.6) 40%,
+    rgba(236, 72, 153, 1) 50%,
+    rgba(195, 199, 64, 1) 60%,
+    rgba(6, 182, 212, 1) 100%
+  );
+  color: transparent;
+  background-clip: text;
+}
+
 @keyframes gradientFlow {
   0% {
-    border-image-source: linear-gradient(90deg, #06b6d4, #ec4899, #facc15);
+    border-image-source: rgba(20, 71, 230, 0.6) 20%, rgba(236, 72, 153, 1) 50%,
+      rgba(195, 199, 64, 1) 60%, rgba(6, 182, 212, 1) 85%;
   }
   100% {
-    border-image-source: linear-gradient(90deg, #facc15, #06b6d4, #ec4899);
+    border-image-source: rgba(20, 71, 230, 0.6) 20%, rgba(236, 72, 153, 1) 50%,
+      rgba(195, 199, 64, 1) 60%, rgba(6, 182, 212, 1) 85%;
   }
 }
 
@@ -123,7 +152,7 @@ nav {
   color: white;
   border: none;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 10px rgba(8, 37, 141, 0.4), 0 0 20px rgba(63, 1, 130, 0.3);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4), 0 0 20px rgba(141, 35, 255, 0.3);
 }
 
 .apply-btn:hover {
