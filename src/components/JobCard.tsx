@@ -8,7 +8,7 @@ const JobCard: React.FC = () => {
         Open Jobs at Hydro Bank
       </h2>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {jobList.map((job) => (
           <div
             key={job.id}
@@ -42,7 +42,7 @@ const JobCard: React.FC = () => {
                 href={job.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="apply-btn inline-block font-semibold text-white py-3 px-10 rounded-full text-lg transition-transform duration-300"
+                className="apply-btn"
               >
                 Apply Now
               </a>

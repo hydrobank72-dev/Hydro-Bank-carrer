@@ -182,29 +182,33 @@ div[style*="border-image"]:hover {
   animation: fadeInUp 1s ease forwards;
 }
 
-/*
-
-.apply-btn {
-  background: linear-gradient(90deg, #00fafa 0%, #f823ff 100%);
-  color: #fff;
+/* BUTTONS */
+.apply-btn, .learn-btn {
+  font-size: 17px;
+  padding: 1ch 2ch;
+  width:200px;
   border: none;
-  padding: 0.85em 2.7em;
-  font-size: 1.35rem;
-  border-radius:100px ;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  box-shadow: 0 0 16px 0 rgba(0, 255, 255, 0.35), 0 0 32px 0 rgba(221, 77, 178, 0.753);
-  transition: all 0.3s cubic-bezier(0.42,0,0.58,1);
+  border-radius: 16px 48px 16px 48px; /* top-left, top-right, bottom-right, bottom-left */
   cursor: pointer;
-  margin: 12px 0 0 0;
-  outline: none;
+  transition: all 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  
+  font-weight: 800; /* bolder text */
+  text-align: center;
+  letter-spacing: 1px; /* adds some spacing for sharp look */
+  text-transform: camelcase;
 }
-
+/* Apply Now - neon gradient */
+.apply-btn {
+  background: linear-gradient(90deg, #00fafa, hsl(323, 65%, 45%));
+  color: #fff;
+  border-radius: 68px 10px 68px 10px; /* top-left, top-right, bottom-right, bottom-left */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4), 0 0 20px rgba(141, 35, 255, 0.3);
+}
 .apply-btn:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 35px 0 rgba(0, 255, 255, 0.6), 0 0 60px 8px rgba(141, 35, 255, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5), 0 0 40px rgba(141, 35, 255, 0.5);
 }
-*/
 
 /* From Uiverse.io by ZacharyCrespin  */
 .apply-btn {
@@ -223,8 +227,38 @@ div[style*="border-image"]:hover {
     18px 18px 0px hsl(0, 0%, 10%);
 }
 
-.apply-btn:hover {
-  background-color: hsl(0, 0%, 50%);
-  color: #fff;
-  box-shadow: none;
+/* FADE-IN ANIMATION */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
+.job-card, .apply-btn, .learn-btn {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* FOOTER GLOW BAR */
+.footer-glow {
+  height: 1px;
+  width: 66%;
+  margin: 5rem auto 0;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #00fafa, #8d23ff);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3), 0 0 25px rgba(141, 35, 255, 0.3);
+}
+
+/* OPTIONAL: Drag & Drop */
+.drag-drop {
+  border: 2px dashed #9ca3af;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.drag-drop.drag-over {
+  border-color: #1447e6;
+  background: #eef2ff;
+  color: #1c398e;
+}
+
+
+
+
