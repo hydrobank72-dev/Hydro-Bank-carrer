@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const Faq = (props: Props) => {
+const Faq = () => {
   return (
     <section id="faq" className="section p-8 max-w-3xl mx-auto fade-in">
       <h2 className="text-hydro-blue font-bold text-4xl mb-8 text-center">

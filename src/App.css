@@ -56,6 +56,17 @@ nav {
   transform: translateY(-2px);
 }
 
+.gradient-bg {
+  background: #012429;
+  background: linear-gradient(
+    59deg,
+    rgba(1, 36, 41, 1) 0%,
+    rgba(2, 5, 31, 1) 20%,
+    rgba(6, 49, 82, 1) 60%,
+    rgba(0, 0, 0, 1) 85%
+  );
+}
+
 .border-b-gradient {
   border-image: linear-gradient(
     59deg,
