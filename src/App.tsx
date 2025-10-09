@@ -9,14 +9,14 @@ import JobCard from "./components/JobCard";
 
 function App() {
   return (
-    <div className="gradient-bg">
+    <div className="bg-black">
       <Header />
       <Hero />
       <JobCard />
       <CTA />
       <About />
       <Faq />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
