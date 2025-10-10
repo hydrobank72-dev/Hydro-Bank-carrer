@@ -48,10 +48,32 @@ const Form: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // ✨ You can save to localStorage or send to backend here
-    console.log("Form submitted:", formData);
+
+    // 🕒 Add submission timestamp
+    const submission = {
+      ...formData,
+      submittedAt: new Date().toLocaleString(),
+    };
+
+    // 📦 Get existing applications
+    const storedApplications = localStorage.getItem("applications");
+    const applications = storedApplications
+      ? JSON.parse(storedApplications)
+      : [];
+
+    // 📝 Add new one
+    applications.push(submission);
+
+    // 💾 Save back to localStorage
+    localStorage.setItem("applications", JSON.stringify(applications));
+
+    console.log("✅ Form submitted & saved:", submission);
+
+    // 🎉 Show success message
     setSuccess(true);
     setTimeout(() => setSuccess(false), 4000);
+
+    // 🧼 Reset form
     setFormData({
       name: "",
       email: "",
