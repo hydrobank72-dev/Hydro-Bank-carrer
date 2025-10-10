@@ -7,17 +7,34 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import JobCard from "./components/JobCard";
 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Applications from "./pages/Applications";
+
 function App() {
   return (
-    <div className="bg-black">
-      <Header />
-      <Hero />
-      <JobCard />
-      <CTA />
-      <About />
-      <Faq />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="bg-black">
+        <Header />
+
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <JobCard />
+                <CTA />
+                <About />
+                <Faq />
+              </>
+            }
+          />
+
+          <Route path="/applications" element={<Applications />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
