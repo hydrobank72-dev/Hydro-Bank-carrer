@@ -10,6 +10,7 @@ import JobCard from "./components/JobCard";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Applications from "./pages/Applications";
 import Form from "./pages/Form";
+import Internships from "./pages/Internships";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
 
           <Route path="/applications" element={<Applications />} />
           <Route path="/form" element={<Form />} />
+          <Route path="/internships" element={<Internships />} />
         </Routes>
         <Footer />
       </div>
