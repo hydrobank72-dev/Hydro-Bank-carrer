@@ -5,6 +5,11 @@ export interface Job {
   link: string;
 }
 
+export type NavLink = {
+  title: string;
+  href: string;
+};
+
 export interface Application {
   name: string;
   email: string;
@@ -15,4 +20,16 @@ export interface Application {
   message: string;
   nda: string;
   submittedAt: string;
+}
+
+export interface FormData {
+  name: string;
+  email: string;
+  whatsapp: string;
+  role: string;
+  skills: string;
+  portfolio: string;
+  message: string;
+  nda: boolean;
+  resume?: File | null;
 }
