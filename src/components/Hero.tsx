@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SideImage from "../assets/product-team.jpg";
+
 // import { Button } from "@/components/ui/button";
 
 const Hero: React.FC = () => {
@@ -33,7 +34,7 @@ const Hero: React.FC = () => {
             </motion.a>
 
             <motion.a
-              href="#internships"
+              href="internships"
               whileHover={{ scale: 1.05 }}
               className="apply-btn inline-block font-semibold text-white py-3 px-10 rounded-full text-lg transition-transform duration-300"
             >
@@ -41,7 +42,7 @@ const Hero: React.FC = () => {
             </motion.a>
 
             <motion.a
-              href="#apply"
+              href="form"
               whileHover={{ scale: 1.05 }}
               className="apply-btn inline-block font-semibold text-white py-3 px-10 rounded-full text-lg  transition-transform duration-300"
             >
