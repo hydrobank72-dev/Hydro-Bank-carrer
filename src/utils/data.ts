@@ -1,4 +1,4 @@
-import type { Job } from "../types";
+import type { Job, NavLink } from "../types";
 
 export const jobList: Job[] = [
   {
@@ -54,5 +54,28 @@ export const jobList: Job[] = [
     title: "Product Team",
     image: "./src/assets/product-team.jpg",
     link: "./pages/form/form.html",
+  },
+];
+
+export const NavLinks: NavLink[] = [
+  {
+    title: "About",
+    href: "#about",
+  },
+  {
+    title: "FAQ",
+    href: "faq#",
+  },
+  {
+    title: "Jobs",
+    href: "#jobs",
+  },
+  {
+    title: "Internships",
+    href: "internships",
+  },
+  {
+    title: "Applications",
+    href: "applications",
   },
 ];
