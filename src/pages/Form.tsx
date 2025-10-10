@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import type { FormData } from "../types";
+import Logo from "../assets/hydrobank-text-logo.jpg";
 
 const Form: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -66,7 +67,7 @@ const Form: React.FC = () => {
   };
 
   return (
-    <section className="w-full min-h-screen flex flex-col items-center py-12 px-4 bg-gradient-to-b from-white to-blue-50">
+    <section className=" bg-white w-full min-h-screen flex flex-col items-center py-12 px-4 ">
       {/* Header */}
       <motion.div
         className="flex flex-col items-center mb-10 text-center"
@@ -76,15 +77,15 @@ const Form: React.FC = () => {
       >
         <div className="flex items-center space-x-3 mb-3">
           <img
-            src="/assets/logo.jpg"
+            src={Logo}
             alt="HydroBank Logo"
-            className="w-[120px] md:w-[150px] rounded-full shadow-lg"
+            className="w-[280px] md:w-[380px] rounded-full shadow-lg"
           />
-          <span className="text-3xl md:text-6xl font-black text-blue-500 tracking-wide">
+          {/* <span className="text-3xl md:text-6xl font-black text-blue-500 tracking-wide">
             HYDROBANK
-          </span>
+          </span> */}
         </div>
-        <p className="mt-3 text-lg md:text-2xl text-slate-700 max-w-xl">
+        <p className="mt-3 text-lg md:text-2xl text-blue-400 max-w-xl">
           Join the future of decentralized crypto banking powered by Web3 🚀
         </p>
       </motion.div>
@@ -92,7 +93,7 @@ const Form: React.FC = () => {
       {/* Form */}
       <form
         onSubmit={handleSubmit}
-        className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-4xl space-y-6"
+        className="bg-slate-100 rounded-2xl shadow-2xl p-8 w-full max-w-4xl space-y-6"
       >
         {/* Full Name */}
         <div>
@@ -293,7 +294,7 @@ const Form: React.FC = () => {
         <div className="text-center">
           <button
             type="submit"
-            className="py-3 px-8 rounded-full font-bold text-white bg-gradient-to-r from-blue-500 to-fuchsia-500 hover:opacity-90 transition"
+            className="py-3 px-8 rounded-full font-bold text-white gradient-primary hover:opacity-90 transition cursor-pointer"
           >
             <i className="fa-solid fa-paper-plane mr-2"></i>
             Submit Application

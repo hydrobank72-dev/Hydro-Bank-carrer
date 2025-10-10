@@ -9,6 +9,7 @@ import JobCard from "./components/JobCard";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Applications from "./pages/Applications";
+import Form from "./pages/Form";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           />
 
           <Route path="/applications" element={<Applications />} />
+          <Route path="/form" element={<Form />} />
         </Routes>
         <Footer />
       </div>
