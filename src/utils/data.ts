@@ -64,7 +64,7 @@ export const NavLinks: NavLink[] = [
   },
   {
     title: "FAQ",
-    href: "faq#",
+    href: "#faq",
   },
   {
     title: "Jobs",
