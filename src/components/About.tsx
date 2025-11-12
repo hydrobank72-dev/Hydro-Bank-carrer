@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Logo from "../assets/hydrobank-text-logo.jpg";
 
 const About: React.FC = () => {
   return (
