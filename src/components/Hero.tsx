@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import SideImage from "../assets/product-team.jpg";
+import SideImage from "/product-team.jpg";
 
 // import { Button } from "@/components/ui/button";
 

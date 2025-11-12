@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Certificate from "../assets/certificate.jpg";
+import Certificate from "/certificate.jpg";
 
 const Internships: React.FC = () => {
   return (

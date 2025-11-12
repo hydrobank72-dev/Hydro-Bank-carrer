@@ -1,4 +1,4 @@
-import Logo from "../assets/hydrobank.jpeg";
+import Logo from "/hydrobank.jpeg";
 import { NavLinks } from "../utils/data";
 
 const Header = () => {

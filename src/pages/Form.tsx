@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import type { FormData } from "../types";
-import Logo from "../assets/hydrobank-text-logo.jpg";
+// import Logo from "./hydrobank-text-logo.jpg";
+import Logo from "/hydrobank-text-logo.jpg";
 
 const Form: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
